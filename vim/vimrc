@@ -98,8 +98,10 @@ function s:setupWrapping()
  " Directories for swp files
  set backupdir=~/.vim/backup
  set directory=~/.vim/backup
- set undofile
- set undodir=~/.vim/undo
+ if version >= 703
+   set undofile
+   set undodir=~/.vim/undo
+ endif
 
  " Reformat the current paragraph according to current 'textwidth' with ^]
  nmap <C-]> gqap
