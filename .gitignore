@@ -1,2 +1,4 @@
-/vim/vim/undo
-/vim/vim/backup
+/vim/vim/undo/*
+!/vim/vim/undo/.touch
+/vim/vim/backup/*
+!/vim/vim/backup/.touch
