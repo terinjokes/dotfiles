@@ -1,0 +1,12 @@
+[user]
+	name = Terin Stock
+	email = terinjokes@gmail.com
+[color]
+	ui = auto
+[core]
+	excludesfile = ~/.dotfiles/git/ignore
+	editor = vim
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[credential]
+	helper = osxkeychain
