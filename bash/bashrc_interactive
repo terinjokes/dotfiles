@@ -6,7 +6,7 @@ export LSCOLORS="dxfxcxdxbxegedabagacad"
 
 # Homebrew should always build
 if shell_is_osx; then
-  HOMEBREW_BUILD_FROM_SOURCE="TRUE"
+  export HOMEBREW_BUILD_FROM_SOURCE="TRUE"
 fi
 
 # Load RVM function
