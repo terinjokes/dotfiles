@@ -1,0 +1,35 @@
+# vim: ft=sh
+
+# Enable colors
+export CLICOLOR=1
+export LSCOLORS="dxfxcxdxbxegedabagacad"
+
+# Homebrew should always build
+if shell_is_osx; then
+  HOMEBREW_BUILD_FROM_SOURCE="TRUE"
+fi
+
+# Load RVM function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
+# Set path
+if shell_is_osx; then
+  # Enable homebrew
+  PATH="/usr/local/sbin:/usr/local/bin:$PATH"
+  # Enable pythonbrew
+  PATH="/usr/local/share/python:$PATH"
+fi
+
+# Enable bash completion
+if shell_is_osx; then
+  if [ -f /usr/local/etc/bash_completion ]; then
+    source /usr/local/etc/bash_completion
+  fi
+fi
+
+# Load VirtualEnv
+if shell_is_osx; then
+  if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
+    source /usr/local/share/python/virtualenvwrapper.sh
+  fi
+fi

@@ -1,0 +1,4 @@
+# vim: ft=sh
+
+# Add RVM to path
+PATH=$PATH:$HOME/.rvm/bin
