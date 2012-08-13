@@ -25,6 +25,12 @@ if shell_is_osx; then
   if [ -f /usr/local/etc/bash_completion ]; then
     source /usr/local/etc/bash_completion
   fi
+else
+  if [ -f /etc/bash_completion ]; then
+    source /etc/bash_completion
+  fi
+else
+
 fi
 
 # Load VirtualEnv
