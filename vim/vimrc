@@ -115,6 +115,9 @@ function s:setupWrapping()
  " Show (partial) command in the status line
  set showcmd
 
+ " Toggle Tagbar
+ nmap <Leader>tb :TagbarToggle<CR>
+
  colorscheme Tomorrow-Night
  set background=dark
 
