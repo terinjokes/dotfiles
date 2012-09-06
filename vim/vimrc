@@ -117,3 +117,6 @@ function s:setupWrapping()
 
  colorscheme Tomorrow-Night
  set background=dark
+
+ " ctrlp settings
+ let g:ctrlp_working_path_mode = 0 " always relative to root
