@@ -42,3 +42,8 @@ fi
 if [ -f ~/.dotfiles/bash/aliases ]; then
   source ~/.dotfiles/bash/aliases
 fi
+
+# Load machine-specific configurations
+if [ -f ~/.dotfiles/bash/machine-specific/`hostname` ]; then
+  source ~/.dotfiles/bash/machine-specific/`hostname`
+fi
