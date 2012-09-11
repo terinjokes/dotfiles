@@ -4,6 +4,12 @@
 export CLICOLOR=1
 export LSCOLORS="dxfxcxdxbxegedabagacad"
 
+# History should be unlimited and appended
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTCONTROL="erasedups"
+shopt -s histappend
+
 # Homebrew should always build
 if shell_is_osx; then
   export HOMEBREW_BUILD_FROM_SOURCE="TRUE"
