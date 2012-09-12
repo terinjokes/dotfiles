@@ -123,3 +123,6 @@ function s:setupWrapping()
 
  " ctrlp settings
  let g:ctrlp_working_path_mode = 0 " always relative to root
+
+ " powerline settings
+ let g:Powerline_symbols = 'fancy'
