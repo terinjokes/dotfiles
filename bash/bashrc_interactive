@@ -24,6 +24,8 @@ if shell_is_osx; then
   PATH="/usr/local/sbin:/usr/local/bin:$PATH"
   # Enable pythonbrew
   PATH="/usr/local/share/python:$PATH"
+  # Enable npm
+  PATH="/usr/local/share/npm/bin:$PATH"
 fi
 
 # Enable bash completion
