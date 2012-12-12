@@ -1,0 +1,19 @@
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/.dotfiles
+
+# source every .zsh file in ths repo
+for config_file ($ZSH/**/*.zsh) source $config_file
+
+# SUPER SECRET CRAP
+# (someday I'll have hostname support)
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# initialize autocomplete here (otherwise functions won't be loaded)
+autoload -U compinit
+compinit
+
+# load every completion after autocomplete loads
+for config_file ($ZSH/**/completion.zsh) source $config_file
