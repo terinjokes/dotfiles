@@ -2,7 +2,7 @@
 export ZSH=$HOME/.dotfiles
 
 # source every .zsh file in ths repo
-for config_file ($ZSH/**/*.zsh) source $config_file
+for config_file ($ZSH/*/*.zsh) source $config_file
 
 # SUPER SECRET CRAP
 # (someday I'll have hostname support)
