@@ -26,4 +26,7 @@ setopt HIST_REDUCE_BLANKS
 
 setopt complete_aliases
 
+bindkey -v
+bindkey "^[[3~" delete-char
+
 zle -N newtab
