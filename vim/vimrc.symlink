@@ -1,5 +1,4 @@
-call pathogen#infect()
-call pathogen#helptags()
+source $HOME/.dotfiles/vim/bundles.vim
 syntax on
 filetype plugin indent on
 
