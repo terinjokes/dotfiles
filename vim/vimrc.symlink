@@ -68,50 +68,64 @@ function s:setupWrapping()
   set wrap
   set wrapmargin=2
   set textwidth=72
- endfunction
+endfunction
 
- " make uses real tabs
- au FileType make set noexpandtab
+" make uses real tabs
+au FileType make set noexpandtab
 
- " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
- au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
- au BufRead,BufNewFile {*.md} set ft=markdown
+au BufRead,BufNewFile {*.md} set ft=markdown
 
- au BufRead,BufNewFile *.txt call s:setupWrapping()
+au BufRead,BufNewFile *.txt call s:setupWrapping()
 
- " Make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008 )
- au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+" Make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008 )
+au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
- " Allow backspacing over everything in insert mode
- set backspace=indent,eol,start
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
- " remap <F1> to turning off search highlighting (default: help)
- map <F1> :nohl<CR>
- imap <F1> <ESC>:nohl<CR> i
+" remap <F1> to turning off search highlighting (default: help)
+map <F1> :nohl<CR>
+imap <F1> <ESC>:nohl<CR> i
 
- " Use modeline overrides
- set modeline
- set modelines=10
+" Use modeline overrides
+set modeline
+set modelines=10
 
- " Directories for swp files
- set backupdir=~/.vim/backup
- set directory=~/.vim/backup
- if version >= 703
-   set undofile
-   set undodir=~/.vim/undo
- endif
+" Directories for swp files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
+if version >= 703
+  set undofile
+  set undodir=~/.vim/undo
+endif
 
- " Reformat the current paragraph according to current 'textwidth' with ^]
- nmap <C-]> gqap
- vmap <C-]> gq
- imap <C-]> <C-O>gqap
+" Reformat the current paragraph according to current 'textwidth' with ^]
+nmap <C-]> gqap
+vmap <C-]> gq
+imap <C-]> <C-O>gqap
 
- " Tabs
- map <Leader>tp :tabp<CR>
- map <Leader>tn :tabnext<CR>
+" Tabs
+map <Leader>tp :tabp<CR>
+map <Leader>tn :tabnext<CR>
 
- " Show (partial) command in the status line
- set showcmd
+" Show (partial) command in the status line
+set showcmd
 
- set background=dark
+" Toggle Tagbar
+nmap <Leader>tb :TagbarToogle<CR>
+
+set background=dark
+colorscheme jellybeans
+
+" ctrlp settings
+let g:ctrlp_working_path_mode = 0 "always relative to root
+
+" powerline settings
+let g:Powerline_symbols = 'fancy'
+
+if executable('ag')
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+end
