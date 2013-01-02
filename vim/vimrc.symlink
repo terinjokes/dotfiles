@@ -114,8 +114,13 @@ map <Leader>tn :tabnext<CR>
 " Show (partial) command in the status line
 set showcmd
 
-" Toggle Tagbar
+" Tagbar Configuration
 nmap <Leader>tb :TagbarToogle<CR>
+" Auto-focus on open, close on selection
+let g:tagbar_autoclose = 1
+
+" Mouse Support
+set mouse=a
 
 set background=dark
 colorscheme jellybeans
