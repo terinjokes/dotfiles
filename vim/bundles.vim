@@ -25,5 +25,6 @@ Bundle 'othree/html5.vim'
 Bundle 'indenthtml.vim'
 Bundle 'acustodioo/vim-tmux'
 Bundle 'matchit.zip'
+Bundle 'jnwhiteh/vim-golang'
 
 filetype plugin indent on
