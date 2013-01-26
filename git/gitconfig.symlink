@@ -1,3 +1,4 @@
+; vim: set ft=gitconfig:
 [user]
   name = Terin Stock
   email = terinjokes@gmail.com
@@ -16,8 +17,7 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [credential]
-  # need to write a wrapper to make this cross-platform safe
-  helper = osxkeychain
+  helper = crossplatform
 
 [hub]
   protocol = https
