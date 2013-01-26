@@ -54,4 +54,11 @@ task :uninstall do
   end
 end
 
-task :default => 'install'
+task :vundle do
+  if !File.exists?("#{ENV["HOME"]}/.vim/bundle/vundle")
+    `git clone https://github.com/gmarik/vundle.git #{ENV["HOME"]}/.vim/bundle/vundle`
+  end
+  system 'vim -u $PWD/vim/bundles.vim +BundleInstall! +qa'
+end
+
+task :default => ['install', 'vundle']
