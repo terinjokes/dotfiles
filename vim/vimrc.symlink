@@ -18,10 +18,10 @@ set encoding=utf-8
 
 " Whitespace stuff
 set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
+set tabstop=2 " Display <Tab>s as 2-spaces.
+set shiftwidth=2 " Shift operations should use the same amount.
+"set softtabstop=2 " Use a mixture of spaces and <Tab>s to complete editing operations
+set noexpandtab
 set list listchars=tab:▸\ ,eol:¬,trail:•
 
 " Searching
@@ -64,21 +64,12 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-function s:setupWrapping()
-  set wrap
-  set wrapmargin=2
-  set textwidth=72
-endfunction
-
-" make uses real tabs
-au FileType make set noexpandtab
-
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
 au BufRead,BufNewFile {*.md} set ft=markdown
 
-au BufRead,BufNewFile *.txt call s:setupWrapping()
+au FileType text set wrap wrapmargin=2 tabstop=8 shiftwidth=8 textwidth=72
 
 " Make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008 )
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
