@@ -27,5 +27,7 @@ Bundle 'matchit.zip'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 Bundle 'brookhong/DBGPavim'
+Bundle 'mattn/webapi-vim'
+Bundle 'duff/vim-scratch'
 
 filetype plugin indent on
