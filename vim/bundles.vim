@@ -12,7 +12,6 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'jakar/vim-json'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'mutewinter/nginx.vim'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'nanotech/jellybeans.vim'
@@ -29,5 +28,6 @@ Bundle 'nsf/gocode', {'rtp': 'vim/'}
 Bundle 'brookhong/DBGPavim'
 Bundle 'mattn/webapi-vim'
 Bundle 'duff/vim-scratch'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
