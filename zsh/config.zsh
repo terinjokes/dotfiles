@@ -1,4 +1,4 @@
-export LSCOLORS="exfxcxdxbxegedabagacad"
+export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
 export CLICOLOR=true
 
 # autoload -U $ZSH/zsh/functions/*(:t)
