@@ -31,5 +31,6 @@ Bundle 'bling/vim-airline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'mhinz/vim-signify'
+Bundle 'cakebaker/scss-syntax.vim'
 
 filetype plugin indent on
