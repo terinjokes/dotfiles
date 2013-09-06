@@ -30,5 +30,6 @@ Bundle 'duff/vim-scratch'
 Bundle 'bling/vim-airline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'mhinz/vim-signify'
 
 filetype plugin indent on

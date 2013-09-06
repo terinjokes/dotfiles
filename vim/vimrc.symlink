@@ -131,3 +131,6 @@ set wildignore+=*/node_modules/*
 let g:ctrlp_custom_ignore = {
 			\ 'dir': '\v[\/](node_modules)$'
 			\}
+
+" Prefer syntastic errors"
+let g:signify_sign_overwrite = 0
