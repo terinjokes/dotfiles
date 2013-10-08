@@ -4,7 +4,13 @@ function directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(directory_name)› '
+function ssh_prompt() {
+  if [ $SSH_CONNECTION ]; then
+    echo "«%{$fg_bold[white]%}%M%{$reset_color%}» "
+  fi
+}
+
+export PROMPT=$'\n$(ssh_prompt)$(directory_name)› '
 
 function title() {
   a=${(V)1//\%/\%\%}
