@@ -7,7 +7,7 @@ call neobundle#rc(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/vimproc', {
-			\ 'bundle': {
+			\ 'build': {
 			\		'windows': 'make -f make_mingw32.mak',
 			\		'cygwin': 'make -f make_cygwin.mak',
 			\		'mac': 'make -f make_mac.mak',
