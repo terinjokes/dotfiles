@@ -54,11 +54,11 @@ task :uninstall do
   end
 end
 
-task :vundle do
-  if !File.exists?("#{ENV["HOME"]}/.vim/bundle/vundle")
-    `git clone https://github.com/gmarik/vundle.git #{ENV["HOME"]}/.vim/bundle/vundle`
+task :bundle do
+  if !File.exists?("#{ENV["HOME"]}/.vim/bundle/neobundle")
+    `git clone https://github.com/Shougo/neobundle.vim.git #{ENV["HOME"]}/.vim/bundle/neobundle.vim`
   end
-  system 'vim -u $PWD/vim/bundles.vim +BundleInstall! +qa'
+  system 'vim -u $PWD/vim/bundles.vim +NeoBundleInstall! +qa'
 end
 
-task :default => ['install', 'vundle']
+task :default => ['install', 'bundle']
