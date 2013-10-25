@@ -16,6 +16,7 @@
 
 [alias]
   lg = log --color --graph --pretty=format:'%Cred%h%Creset %Cgreen%G?%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	fetch = fetch --prune
 	hash = rev-parse --verify --short HEAD
 
 [credential]
