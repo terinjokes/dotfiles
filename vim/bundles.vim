@@ -48,6 +48,8 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'alderz/smali-vim'
+NeoBundle 'nono/vim-handlebars'
+NeoBundle 'w0ng/vim-hybrid'
 
 filetype plugin indent on
 NeoBundleCheck

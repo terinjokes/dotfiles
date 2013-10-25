@@ -114,7 +114,8 @@ let g:tagbar_autoclose = 1
 set mouse=a
 
 set background=dark
-colorscheme jellybeans
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
 
 " ctrlp settings
 let g:ctrlp_working_path_mode = 0 "always relative to root
