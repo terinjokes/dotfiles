@@ -27,7 +27,7 @@ set-option -g   status-keys vi
 
 set-window-option -g window-status-fg white
 set-window-option -g window-status-bg blue
-set-window-option -g window-status-attr dim
+set-window-option -g window-status-attr bright
 
 set-window-option -g window-status-current-fg white
 set-window-option -g window-status-current-bg red
