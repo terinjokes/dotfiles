@@ -50,6 +50,8 @@ NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'alderz/smali-vim'
 NeoBundle 'nono/vim-handlebars'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'jimenezrick/vimerl'
+NeoBundle 'embear/vim-localvimrc'
 
 filetype plugin indent on
 NeoBundleCheck
