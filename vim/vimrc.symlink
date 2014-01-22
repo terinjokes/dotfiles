@@ -109,12 +109,17 @@ set showcmd
 nmap <Leader>tb :TagbarToggle<CR>
 " Auto-focus on open, close on selection
 let g:tagbar_autoclose = 1
+let g:tagbar_type_javascript = {
+			\ 'ctagsbin': '/usr/local/bin/jsctags',
+			\ 'ctagsargs': '-f -'
+			\}
 
 " Mouse Support
 set mouse=a
 
 set background=dark
-let g:hybrid_use_Xresources = 1
+"let g:hybrid_use_Xresources = 1
+let g:hybrid_use_iTerm_colors = 1
 colorscheme hybrid
 
 " ctrlp settings
@@ -135,3 +140,10 @@ let g:ctrlp_custom_ignore = {
 
 " Prefer syntastic errors"
 let g:signify_sign_overwrite = 0
+
+augroup markdown
+	autocmd!
+	autocmd FileType markdown call pencil#init({'wrap': 'hard'})
+	autocmd FileType markdown call quotable#init()
+	autocmd FileType markdown call lexical#init()
+augroup END
