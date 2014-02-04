@@ -2,9 +2,6 @@ source $HOME/.dotfiles/vim/bundles.vim
 syntax on
 filetype plugin indent on
 
-" Reset leader (default \)
-let mapleader=","
-
 " Don't have to be vi-compatible
 set nocompatible
 
@@ -40,16 +37,10 @@ set formatoptions+=n1 " add formatting numbered list to autoformat
 " Spelling options
 set spell spelllang=en_us
 
-" Moving around windows
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
 "Misc
 set ttyfast " using a fast terminal
-nnoremap ; :
 inoremap jj <ESC>
+inoremap <ESC> <NOP>
 
 " Tab completion
 set wildmode=list:longest,list:full
@@ -93,15 +84,6 @@ if version >= 703
   set undodir=~/.vim/undo
 endif
 
-" Reformat the current paragraph according to current 'textwidth' with ^]
-nmap <C-]> gqap
-vmap <C-]> gq
-imap <C-]> <C-O>gqap
-
-" Tabs
-map <Leader>tp :tabp<CR>
-map <Leader>tn :tabnext<CR>
-
 " Show (partial) command in the status line
 set showcmd
 
@@ -113,9 +95,6 @@ let g:tagbar_type_javascript = {
 			\ 'ctagsbin': '/usr/local/bin/jsctags',
 			\ 'ctagsargs': '-f -'
 			\}
-
-" Mouse Support
-set mouse=a
 
 set background=dark
 "let g:hybrid_use_Xresources = 1
@@ -138,8 +117,9 @@ let g:ctrlp_custom_ignore = {
 			\ 'dir': '\v[\/](node_modules)$'
 			\}
 
-" Prefer syntastic errors"
-let g:signify_sign_overwrite = 0
+let g:sneak#streak = 1
+let g:hardmode = 1
+let g:HardMode_echo = 0
 
 augroup markdown
 	autocmd!

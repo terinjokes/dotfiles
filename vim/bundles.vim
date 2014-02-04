@@ -43,13 +43,21 @@ NeoBundle 'Valloric/YouCompleteMe', {
 			\	}
 			\}
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'mhinz/vim-signify'
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'alderz/smali-vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'jimenezrick/vimerl'
 NeoBundle 'embear/vim-localvimrc'
+NeoBundle 'int3/vim-extradite'
+"NeoBundle 'maxbrunsfeld/vim-yankstack'
+NeoBundle 'moll/vim-node'
+NeoBundle 'chrisbra/unicode.vim'
+NeoBundle 'sidorares/node-vim-debugger'
+NeoBundle 'justinmk/vim-sneak'
+NeoBundle 'gkirilov/hardmode'
+NeoBundle 'derekwyatt/vim-scala'
 
 NeoBundle 'reedes/vim-wordy'
 NeoBundle 'reedes/vim-lexical'
