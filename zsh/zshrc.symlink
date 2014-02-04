@@ -1,6 +1,8 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
+for config_file ($ZSH/system/*.zsh) source $config_file
+
 # source every .zsh file in ths repo
 for config_file ($ZSH/*/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
 
