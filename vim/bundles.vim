@@ -56,7 +56,7 @@ NeoBundle 'moll/vim-node'
 NeoBundle 'chrisbra/unicode.vim'
 NeoBundle 'sidorares/node-vim-debugger'
 NeoBundle 'justinmk/vim-sneak'
-NeoBundle 'gkirilov/hardmode'
+"NeoBundle 'gkirilov/hardmode'
 NeoBundle 'derekwyatt/vim-scala'
 
 NeoBundle 'reedes/vim-wordy'
