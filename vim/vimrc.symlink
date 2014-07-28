@@ -119,9 +119,17 @@ let g:sneak#streak = 1
 let g:hardmode = 1
 let g:HardMode_echo = 0
 
+let g:javascript_conceal = 1
+set conceallevel=2
+highlight! link Conceal Structure
+
+vnoremap <silent> <leader>es :!esformatter --config ~/esformatter.json<CR>
+nnoremap <silent> <leader>es :%!esformatter --config ~/esformatter.json<CR>
+
 augroup markdown
 	autocmd!
-	autocmd FileType markdown call pencil#init({'wrap': 'hard'})
 	autocmd FileType markdown call quotable#init()
 	autocmd FileType markdown call lexical#init()
 augroup END
+
+let g:syntastic_javascript_checkers = ['jsxhint']
