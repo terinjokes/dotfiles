@@ -25,6 +25,9 @@
 [hub]
   protocol = https
 
+[gh]
+  protocol = https
+
 [push]
   default = upstream
 
