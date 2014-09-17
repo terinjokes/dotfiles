@@ -123,8 +123,11 @@ let g:javascript_conceal = 1
 set conceallevel=2
 highlight! link Conceal Structure
 
-vnoremap <silent> <leader>es :!esformatter --config ~/esformatter.json<CR>
-nnoremap <silent> <leader>es :%!esformatter --config ~/esformatter.json<CR>
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"call unite#filters#sorter_default#use(['sorter_rank'])
+call unite#custom#source('file_rec/async', 'sorters', 'sorter_rank')
+
+nnoremap <silent> <C-p> :Unite -start-insert file_rec/async<cr>
 
 augroup markdown
 	autocmd!
