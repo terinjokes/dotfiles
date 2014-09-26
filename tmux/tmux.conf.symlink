@@ -50,3 +50,5 @@ unbind-key -        ; bind-key -        split-window -v
 
 unbind-key @        ; bind-key @        confirm-before kill-window
 unbind-key M-r      ; bind-key -n M-r   source-file ~/.tmux.conf
+
+source-file ~/.dotfiles/tmux/tmuxlinux.snapshot

@@ -67,5 +67,7 @@ NeoBundle 'reedes/vim-lexical'
 NeoBundle 'reedes/vim-quotable'
 NeoBundle 'reedes/vim-pencil'
 
+NeoBundle 'edkolev/tmuxline.vim'
+
 filetype plugin indent on
 NeoBundleCheck
