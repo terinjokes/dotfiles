@@ -136,3 +136,12 @@ augroup markdown
 augroup END
 
 let g:syntastic_javascript_checkers = ['jsxhint']
+
+let g:tmuxline_preset = {
+	\'a' : '#S',
+	\'b' : '#(~/.dotfiles/tmux/scripts/git.sh)',
+	\'win' : ['#I', '#W'],
+	\'cwin' : ['#I', '#W'],
+	\'y': ['%Y-%m-%d', '%H:%M'],
+	\'z': ['#h'],
+	\'options': {'status-justify' : 'left'}}

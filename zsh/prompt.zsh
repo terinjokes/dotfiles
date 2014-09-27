@@ -28,6 +28,7 @@ function title() {
 
 function precmd() {
   title "zsh" "%55<...<%~"
+  [ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD"
 }
 
 function preexec() {
