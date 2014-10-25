@@ -1,9 +1,11 @@
+if !1 | finish | endif
+
 if has('vim_starting')
 	set nocompatible
 	set rtp+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/vimproc', {
@@ -69,5 +71,8 @@ NeoBundle 'reedes/vim-pencil'
 
 NeoBundle 'edkolev/tmuxline.vim'
 
+call neobundle#end()
+
 filetype plugin indent on
+
 NeoBundleCheck
