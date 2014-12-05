@@ -18,7 +18,7 @@ set nowrap
 set tabstop=2 " Display <Tab>s as 2-spaces.
 set shiftwidth=2 " Shift operations should use the same amount.
 "set softtabstop=2 " Use a mixture of spaces and <Tab>s to complete editing operations
-set noexpandtab
+set expandtab
 set list listchars=tab:▸\ ,eol:¬,trail:•
 
 " Searching
@@ -135,7 +135,7 @@ augroup markdown
 	autocmd FileType markdown call lexical#init()
 augroup END
 
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 let g:tmuxline_preset = {
 	\'a' : '#S',
