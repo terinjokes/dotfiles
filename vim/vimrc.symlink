@@ -96,11 +96,7 @@ let g:tagbar_type_javascript = {
 			\}
 
 set background=dark
-let g:hybrid_use_Xresources = 1
-colorscheme hybrid
-
-" ctrlp settings
-let g:ctrlp_working_path_mode = 0 "always relative to root
+colorscheme badwolf
 
 " airline settings
 let g:airline_powerline_fonts=1
@@ -111,13 +107,8 @@ if executable('ag')
 end
 
 set wildignore+=*/node_modules/*
-let g:ctrlp_custom_ignore = {
-			\ 'dir': '\v[\/](node_modules)$'
-			\}
 
 let g:sneak#streak = 1
-let g:hardmode = 1
-let g:HardMode_echo = 0
 
 let g:javascript_conceal = 1
 set conceallevel=2
