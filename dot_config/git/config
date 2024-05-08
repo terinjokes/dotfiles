@@ -1,0 +1,29 @@
+[user]
+	email = "terinjokes@gmail.com"
+	name = "Terin Stock"
+
+[color]
+	branch = "auto"
+	diff = "auto"
+	status = "auto"
+	ui = "auto"
+
+[core]
+	pager = "delta"
+
+[diff]
+	algorithm = "histogram"
+	colorMoved = "default"
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+[interactive]
+	diffFilter = "delta --color-only"
+
+[merge]
+	conflictStyle = "diff3"
+
+[delta]
+	syntax-theme = "Nord"
