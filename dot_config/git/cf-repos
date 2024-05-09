@@ -1,0 +1,13 @@
+[browseAtRemote]
+	actualHost = "bitbucket.cfdata.org"
+	type = "stash"
+
+[user]
+	email = "terin@cloudflare.com"
+
+[url "ssh://git@git.cfdata.org"]
+  insteadOf = ssh://git@stash.cfops.it:7999
+  insteadOf = ssh://git@bitbucket.cfdata.org:7999
+  insteadOf = ssh://git@bitbucket.cfdata.org
+  insteadOf = https://bitbucket.cfdata.org/scm
+  insteadOf = https://bitbucket.cfdata.org

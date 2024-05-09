@@ -1,0 +1,3 @@
+{{- if ne .machine.type "work" }}
+.config/git/cf-repos
+{{- end }}
