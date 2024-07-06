@@ -1,0 +1,12 @@
+import = [
+    "~/.config/alacritty/nord.toml"
+]
+
+[env]
+TERM = "alacritty-direct"
+
+[font]
+size = 10
+
+[font.normal]
+family = "Berkeley Mono"

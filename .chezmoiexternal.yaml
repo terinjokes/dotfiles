@@ -2,3 +2,7 @@
   type: git-repo
   url: "https://github.com/doomemacs/doomemacs.git"
   refreshPeriod: "168h"
+.config/alacritty/nord.toml:
+  type: file
+  url: "https://github.com/alacritty/alacritty-theme/raw/master/themes/nord.toml"
+  refreshPeriod: "168h"
