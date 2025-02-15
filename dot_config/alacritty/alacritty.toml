@@ -10,5 +10,5 @@ family = "Berkeley Mono"
 
 [general]
 import = [
-    "~/.config/alacritty/nord.toml"
+    "~/.config/alacritty/catppuccin-mocha.toml"
 ]
