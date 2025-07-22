@@ -32,11 +32,6 @@
 	root = ~/Development
 
 {{- if eq .machine.type "work" }}
-[sendemail "cloudflare"]
-	envelopeSender = "auto"
-	from = "terin@cloudflare.com"
-	smtpServer = "mstmp"
-
 [includeIf "gitdir:~/cf-repos/"]
 	path = "./cf-repos"
 {{- end }}

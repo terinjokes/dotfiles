@@ -1,13 +1,31 @@
-[browseAtRemote]
-	actualHost = "bitbucket.cfdata.org"
-	type = "stash"
+;;; -*- mode: gitconfig -*-
 
 [user]
 	email = "terin@cloudflare.com"
 
+[browseAtRemote]
+	actualHost = "gitlab.cfdata.org"
+	type = "gitlab"
+
+[gitlab "gitlab.cfdata.org/api"]
+	user = terin
+
+[gitlab "gitlab.cfdata.org/api/v4"]
+    user = terin
+
+[url "ssh://git@gitlab.cfdata.org"]
+  insteadOf = https://gitlab.cfdata.org
 [url "ssh://git@git.cfdata.org"]
   insteadOf = ssh://git@stash.cfops.it:7999
   insteadOf = ssh://git@bitbucket.cfdata.org:7999
   insteadOf = ssh://git@bitbucket.cfdata.org
   insteadOf = https://bitbucket.cfdata.org/scm
   insteadOf = https://bitbucket.cfdata.org
+
+[sendemail "cloudflare"]
+	envelopeSender = "auto"
+	from = "terin@cloudflare.com"
+	smtpServer = "mstmp"
+
+[alias]
+    lg = log --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %x1b]8%x3b%x3bhttps://jira.cfdata.org/issues/?jql=key+in+(%(trailers:key=Bug,valueonly,separator=%x2C))%x1b%x5c%(trailers:key=Bug,valueonly,separator=%x2C)%x1b]8%x3b%x3b%x1b%x5c'
