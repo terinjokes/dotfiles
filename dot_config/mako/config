@@ -1,0 +1,2 @@
+default-timeout=5000
+on-button-middle=exec makoctl menu -n "$id" fuzzel -dp 'Select action: '
