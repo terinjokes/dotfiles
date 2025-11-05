@@ -139,6 +139,12 @@ window-rule {
     default-window-height {  }
 }
 
+window-rule {
+    match app-id="swayimg"
+
+    draw-border-with-background false
+}
+
 /-window-rule {
     match is-focused=false
     baba-is-float true
