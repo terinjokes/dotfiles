@@ -120,6 +120,12 @@ hotkey-overlay {
     skip-at-startup
 }
 
+{{ if eq .machine.type "work" -}}
+xwayland-satellite {
+    path "/home/terin/gentoo/usr/bin/xwayland-satellite"
+}
+{{- end }}
+
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
