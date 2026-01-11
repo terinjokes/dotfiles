@@ -1,0 +1,58 @@
+local PREFIX=
+typeset -U path cdpath fpath manpath
+
+eval $(dircolors -b ~/.dir_colors)
+
+autoload -U compinit && compinit
+autoload -U bashcompinit && bashcompinit
+
+HISTSIZE="10000"
+SAVEHIST="10000"
+
+HISTFILE="$HOME/.zsh_history"
+mkdir -p "$(dirname "$HISTFILE")"
+
+setopt HIST_FCNTL_LOCK
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+unsetopt HIST_EXPIRE_DUPS_FIRST
+setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
+
+
+if [[ $options[zle] = on ]]; then
+  . /usr/share/fzf/key-bindings.zsh
+fi
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion::complete:make:*:targets' call-command true
+PROMPT='%2~ » '
+
+GPG_TTY="$(tty)"
+export GPG_TTY
+
+source "${PREFIX}/usr/share/direnv/shell-init/zsh"
+source "${PREFIX}/usr/share/bash-completion/completions/kubie"
+
+if [[ $options[zle] = on ]]; then
+  source "${PREFIX}/usr/share/atuin/shell-init/zsh"
+fi
+
+[ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \
+  source "$EAT_SHELL_INTEGRATION_DIR/zsh"
+
+function osc7-pwd() {
+    emulate -L zsh # also sets localoptions for us
+    setopt extendedglob
+    local LC_ALL=C
+    printf '\e]7;file://%s%s\e\' $HOST ${PWD//(#m)([^@-Za-z&-;_~])/%${(l:2::0:)$(([##16]#MATCH))}}
+}
+
+function chpwd-osc7-pwd() {
+    (( ZSH_SUBSHELL )) || osc7-pwd
+}
+add-zsh-hook -Uz chpwd chpwd-osc7-pwd
+
+# Aliases
+alias git='git-branchless wrap'
+alias ls='ls --color'
