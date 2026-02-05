@@ -30,8 +30,8 @@ PROMPT='%2~ » '
 GPG_TTY="$(tty)"
 export GPG_TTY
 
-[ -f "${PREFIX}/usr/share/direnv/shell-init/zsh" ] &&\
-    source "${PREFIX}/usr/share/direnv/shell-init/zsh"
+[ -f "${PREFIX}/usr/share/mise/shell-init/zsh" ] &&\
+    source "${PREFIX}/usr/share/mise/shell-init/zsh"
 [ -f "${PREFIX}/usr/share/bash-completion/completions/kubie" ] &&\
     source "${PREFIX}/usr/share/bash-completion/completions/kubie"
 
