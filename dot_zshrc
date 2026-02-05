@@ -1,3 +1,4 @@
+# -*- mode: sh -*-
 local PREFIX=
 typeset -U path cdpath fpath manpath
 
@@ -5,6 +6,7 @@ eval $(dircolors -b ~/.dir_colors)
 
 autoload -U compinit && compinit
 autoload -U bashcompinit && bashcompinit
+autoload -U add-zsh-hook
 
 HISTSIZE="10000"
 SAVEHIST="10000"
@@ -20,9 +22,6 @@ setopt SHARE_HISTORY
 setopt EXTENDED_HISTORY
 
 
-if [[ $options[zle] = on ]]; then
-  . /usr/share/fzf/key-bindings.zsh
-fi
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion::complete:make:*:targets' call-command true
@@ -31,11 +30,17 @@ PROMPT='%2~ » '
 GPG_TTY="$(tty)"
 export GPG_TTY
 
-source "${PREFIX}/usr/share/direnv/shell-init/zsh"
-source "${PREFIX}/usr/share/bash-completion/completions/kubie"
+[ -f "${PREFIX}/usr/share/direnv/shell-init/zsh" ] &&\
+    source "${PREFIX}/usr/share/direnv/shell-init/zsh"
+[ -f "${PREFIX}/usr/share/bash-completion/completions/kubie" ] &&\
+    source "${PREFIX}/usr/share/bash-completion/completions/kubie"
 
 if [[ $options[zle] = on ]]; then
-  source "${PREFIX}/usr/share/atuin/shell-init/zsh"
+    [ -f "${PREFIX}/usr/share/fzf/key-bindings.zsh" ] &&\
+        source "${PREFIX}/usr/share/fzf/key-bindings.zsh"
+
+    [ -f "${PREFIX}/usr/share/atuin/shell-init/zsh" ] &&\
+        source "${PREFIX}/usr/share/atuin/shell-init/zsh"
 fi
 
 [ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \
